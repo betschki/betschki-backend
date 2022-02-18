@@ -6,6 +6,9 @@ export class Content {
   id: number;
 
   @Column()
+  page: string;
+
+  @Column()
   heading: string;
 
   @Column()
