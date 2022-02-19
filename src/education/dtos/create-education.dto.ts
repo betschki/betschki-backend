@@ -1,4 +1,4 @@
-import { IsString } from 'class-validator';
+import { IsArray, IsString } from 'class-validator';
 
 export class CreateEducationDto {
   @IsString()
@@ -8,9 +8,6 @@ export class CreateEducationDto {
   school: string;
 
   @IsString()
-  location: string;
-
-  @IsString()
   startDate: string;
 
   @IsString()
@@ -18,4 +15,7 @@ export class CreateEducationDto {
 
   @IsString()
   description: string;
+
+  @IsArray()
+  tags: string[];
 }

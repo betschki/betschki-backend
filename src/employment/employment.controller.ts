@@ -20,7 +20,7 @@ export class EmploymentController {
     return this.employmentService.getAllEmployments();
   }
 
-  @Get('id')
+  @Get('/:id')
   getOneEmployment(@Param('id') id: string) {
     return this.employmentService.getOneEmployment(parseInt(id));
   }

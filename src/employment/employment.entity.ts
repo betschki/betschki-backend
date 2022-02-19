@@ -12,9 +12,6 @@ export class Employment {
   company: string;
 
   @Column()
-  location: string;
-
-  @Column()
   startDate: string;
 
   @Column()
@@ -22,4 +19,7 @@ export class Employment {
 
   @Column()
   description: string;
+
+  @Column('simple-array')
+  tags: string[];
 }

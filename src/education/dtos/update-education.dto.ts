@@ -1,4 +1,4 @@
-import { IsString, IsOptional } from 'class-validator';
+import { IsString, IsOptional, IsArray } from 'class-validator';
 
 export class UpdateEducationDto {
   @IsString()
@@ -11,10 +11,6 @@ export class UpdateEducationDto {
 
   @IsString()
   @IsOptional()
-  location: string;
-
-  @IsString()
-  @IsOptional()
   startDate: string;
 
   @IsString()
@@ -24,4 +20,8 @@ export class UpdateEducationDto {
   @IsString()
   @IsOptional()
   description: string;
+
+  @IsArray()
+  @IsOptional()
+  tags: string[];
 }

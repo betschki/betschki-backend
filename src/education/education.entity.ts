@@ -12,9 +12,6 @@ export class Education {
   school: string;
 
   @Column()
-  location: string;
-
-  @Column()
   startDate: string;
 
   @Column()
@@ -22,4 +19,7 @@ export class Education {
 
   @Column()
   description: string;
+
+  @Column('simple-array')
+  tags: string[];
 }
