@@ -23,6 +23,11 @@ export class ContactController {
     return this.contactService.find();
   }
 
+  @Get('/:id')
+  getOneContactInfo(@Param('id') id: string) {
+    return this.contactService.findOne(parseInt(id));
+  }
+
   @Post()
   createContactInfo(@Body() contact: CreateContactDto) {
     return this.contactService.create(contact);
