@@ -17,7 +17,7 @@ export class Employment {
   @Column()
   endDate: string;
 
-  @Column()
+  @Column('longtext')
   description: string;
 
   @Column('simple-array')

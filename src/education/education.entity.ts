@@ -17,7 +17,7 @@ export class Education {
   @Column()
   endDate: string;
 
-  @Column()
+  @Column('longtext')
   description: string;
 
   @Column('simple-array')
